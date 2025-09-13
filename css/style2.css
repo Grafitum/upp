@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2 {
+  color: #00695c;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#start-screen, #game-over {
+  margin-top: 80px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffffcc;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+#material {
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px dashed #888;
+  border-radius: 12px;
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#material:active {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.bins {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bin {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.bin:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background-color: #f9f9f9;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  min-height: 40px;
+  transition: all 0.3s ease;
+}

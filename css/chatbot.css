@@ -1,0 +1,186 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Corpo centralizado */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e0f7fa, #a7ffeb);
+}
+
+/* Container do chat */
+.chat-container {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Header */
+.chat-header {
+  background-color: #00c853;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Caixa de mensagens */
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f1f8f5;
+}
+
+/* Mensagens */
+.user-message, .bot-message {
+  max-width: 75%;
+  padding: 12px 18px;
+  border-radius: 25px;
+  word-wrap: break-word;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.4s forwards;
+}
+
+/* Mensagem do usuário */
+.user-message {
+  background-color: #00c853;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/* Mensagem do bot */
+.bot-message {
+  background-color: #e0f7fa;
+  color: #00796b;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+/* Ícones de robo e usuário */
+.user-message::before {
+  content: "🧑";
+}
+
+.bot-message::before {
+  content: "🤖";
+}
+
+/* Container de input */
+.chat-input-container {
+  display: flex;
+  padding: 12px;
+  background-color: #f1f8f5;
+  gap: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Input */
+#user-input {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Botão */
+#send-btn {
+  background-color: #00c853;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+#send-btn:hover {
+  background-color: #00a33c;
+}
+
+/* Rolagem suave */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: #00c853;
+  border-radius: 3px;
+}
+
+/* Animações */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* =========================================
+   DROPDOWN 
+
+   /* Manter todo o CSS anterior */
+
+.chat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  background-color: #f1f8f5;
+  border-top: 1px solid #ddd;
+}
+
+.option-btn {
+  background-color: #00c853;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.option-btn:hover {
+  background-color: #00a33c;
+}
+                                                                                  
